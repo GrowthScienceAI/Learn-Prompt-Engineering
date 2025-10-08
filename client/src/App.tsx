@@ -4,15 +4,19 @@ import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/not-found";
-
-import { EdupressUiKit } from "@/pages/EdupressUiKit";
+import Home from "@/pages/Home";
+import ModuleListing from "@/pages/ModuleListing";
+import LessonViewer from "@/pages/LessonViewer";
+import TechniquesBrowser from "@/pages/TechniquesBrowser";
 
 function Router() {
   return (
     <Switch>
-      {/* Add pages below */}
-      <Route path="/" component={EdupressUiKit} />
-      {/* Fallback to 404 */}
+      <Route path="/" component={Home} />
+      <Route path="/modules" component={ModuleListing} />
+      <Route path="/modules/:moduleId" component={ModuleListing} />
+      <Route path="/modules/:moduleId/lessons/:lessonId" component={LessonViewer} />
+      <Route path="/techniques" component={TechniquesBrowser} />
       <Route component={NotFound} />
     </Switch>
   );
