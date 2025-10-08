@@ -1,0 +1,301 @@
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .all-\[unset\] {
+    all: unset;
+  }
+}
+
+:root {
+  --a-2-font-family: "Jost", Helvetica;
+  --a-2-font-size: 16px;
+  --a-2-font-style: normal;
+  --a-2-font-weight: 500;
+  --a-2-letter-spacing: 0px;
+  --a-2-line-height: 150%;
+  --a-font-family: "Jost", Helvetica;
+  --a-font-size: 18px;
+  --a-font-style: normal;
+  --a-font-weight: 500;
+  --a-letter-spacing: 0px;
+  --a-line-height: 150%;
+  --a2-font-family: "Jost", Helvetica;
+  --a2-font-size: 16px;
+  --a2-font-style: normal;
+  --a2-font-weight: 500;
+  --a2-letter-spacing: 0px;
+  --a2-line-height: 150%;
+  --colorblack: rgba(0, 0, 0, 1);
+  --colordark-grey: rgba(85, 85, 85, 1);
+  --colorgreen: rgba(85, 190, 36, 1);
+  --colorgrey: rgba(157, 157, 157, 1);
+  --colorlight-grey: rgba(234, 234, 234, 1);
+  --colormain: rgba(255, 120, 45, 1);
+  --colorsecondary: rgba(255, 171, 45, 1);
+  --colorwhite: rgba(255, 255, 255, 1);
+  --colorwhite-grey: rgba(245, 245, 245, 1);
+  --h1-font-family: "Exo", Helvetica;
+  --h1-font-size: 48px;
+  --h1-font-style: normal;
+  --h1-font-weight: 600;
+  --h1-large-font-family: "Exo", Helvetica;
+  --h1-large-font-size: 72px;
+  --h1-large-font-style: normal;
+  --h1-large-font-weight: 600;
+  --h1-large-letter-spacing: 0px;
+  --h1-large-line-height: 120.00000762939453%;
+  --h1-letter-spacing: 0px;
+  --h1-line-height: 120.00000762939453%;
+  --h2-font-family: "Exo", Helvetica;
+  --h2-font-size: 32px;
+  --h2-font-style: normal;
+  --h2-font-weight: 600;
+  --h2-letter-spacing: 0px;
+  --h2-line-height: 120.00000762939453%;
+  --h4-font-family: "Exo", Helvetica;
+  --h4-font-size: 20px;
+  --h4-font-style: normal;
+  --h4-font-weight: 600;
+  --h4-letter-spacing: 0px;
+  --h4-line-height: 120.00000762939453%;
+  --h5-font-family: "Exo", Helvetica;
+  --h5-font-size: 16px;
+  --h5-font-style: normal;
+  --h5-font-weight: 600;
+  --h5-letter-spacing: 0px;
+  --h5-line-height: 120.00000762939453%;
+  --heading-h1-font-family: "Exo", Helvetica;
+  --heading-h1-font-size: 36px;
+  --heading-h1-font-style: normal;
+  --heading-h1-font-weight: 600;
+  --heading-h1-letter-spacing: 0px;
+  --heading-h1-line-height: 120.00000762939453%;
+  --heading-h2-font-family: "Exo", Helvetica;
+  --heading-h2-font-size: 32px;
+  --heading-h2-font-style: normal;
+  --heading-h2-font-weight: 600;
+  --heading-h2-letter-spacing: 0px;
+  --heading-h2-line-height: 120.00000762939453%;
+  --heading-h4-font-family: "Exo", Helvetica;
+  --heading-h4-font-size: 20px;
+  --heading-h4-font-style: normal;
+  --heading-h4-font-weight: 600;
+  --heading-h4-letter-spacing: 0px;
+  --heading-h4-line-height: 120.00000762939453%;
+  --heading-h5-font-family: "Exo", Helvetica;
+  --heading-h5-font-size: 16px;
+  --heading-h5-font-style: normal;
+  --heading-h5-font-weight: 600;
+  --heading-h5-letter-spacing: 0px;
+  --heading-h5-line-height: 120.00000762939453%;
+  --p-2-font-family: "Jost", Helvetica;
+  --p-2-font-size: 16px;
+  --p-2-font-style: normal;
+  --p-2-font-weight: 400;
+  --p-2-letter-spacing: 0px;
+  --p-2-line-height: 150%;
+  --p-font-family: "Jost", Helvetica;
+  --p-font-size: 18px;
+  --p-font-style: normal;
+  --p-font-weight: 400;
+  --p-letter-spacing: 0px;
+  --p-line-height: 150%;
+  --p2-font-family: "Jost", Helvetica;
+  --p2-font-size: 16px;
+  --p2-font-style: normal;
+  --p2-font-weight: 400;
+  --p2-letter-spacing: 0px;
+  --p2-line-height: 150%;
+  --shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.1);
+}
+
+:root {
+  --animate-spin: spin 1s linear infinite;
+}
+
+.animate-fade-in {
+  animation: fade-in 1s var(--animation-delay, 0s) ease forwards;
+}
+
+.animate-fade-up {
+  animation: fade-up 1s var(--animation-delay, 0s) ease forwards;
+}
+
+.animate-marquee {
+  animation: marquee var(--duration) infinite linear;
+}
+
+.animate-marquee-vertical {
+  animation: marquee-vertical var(--duration) linear infinite;
+}
+
+.animate-shimmer {
+  animation: shimmer 8s infinite;
+}
+
+.animate-spin {
+  animation: var(--animate-spin);
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+@keyframes image-glow {
+  0% {
+    opacity: 0;
+    animation-timing-function: cubic-bezier(0.74, 0.25, 0.76, 1);
+  }
+
+  10% {
+    opacity: 0.7;
+    animation-timing-function: cubic-bezier(0.12, 0.01, 0.08, 0.99);
+  }
+
+  to {
+    opacity: 0.4;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes shimmer {
+  0%,
+  90%,
+  to {
+    background-position: calc(-100% - var(--shimmer-width)) 0;
+  }
+
+  30%,
+  60% {
+    background-position: calc(100% + var(--shimmer-width)) 0;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate(0);
+  }
+
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+
+@keyframes marquee-vertical {
+  0% {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(calc(-100% - var(--gap)));
+  }
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 47.4% 11.2%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+
+    --card: transparent;
+    --card-foreground: 222.2 47.4% 11.2%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 210 40% 98%;
+
+    --ring: 215 20.2% 65.1%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 224 71% 4%;
+    --foreground: 213 31% 91%;
+
+    --muted: 223 47% 11%;
+    --muted-foreground: 215.4 16.3% 56.9%;
+
+    --accent: 216 34% 17%;
+    --accent-foreground: 210 40% 98%;
+
+    --popover: 224 71% 4%;
+    --popover-foreground: 215 20.2% 65.1%;
+
+    --border: 216 34% 17%;
+    --input: 216 34% 17%;
+
+    --card: transparent;
+    --card-foreground: 213 31% 91%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 1.2%;
+
+    --secondary: 222.2 47.4% 11.2%;
+    --secondary-foreground: 210 40% 98%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+
+    --ring: 216 34% 17%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
