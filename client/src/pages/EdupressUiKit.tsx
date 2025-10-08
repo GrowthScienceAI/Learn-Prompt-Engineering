@@ -4,14 +4,14 @@ const sections = [
   {
     title: "Home Page",
     width: "w-[1920px]",
-    images: [{ alt: "Home course basic", src: "" }],
+    images: [{ alt: "Home course basic", src: "", width: "" }],
   },
   {
     title: "Course Listing",
     width: "w-full",
     images: [
-      { alt: "Course listing", src: "" },
-      { alt: "Course listing", src: "" },
+      { alt: "Course listing", src: "", width: "" },
+      { alt: "Course listing", src: "", width: "" },
     ],
   },
   {
@@ -29,34 +29,34 @@ const sections = [
     title: "Blog Listing",
     width: "w-full",
     images: [
-      { alt: "Blog listing", src: "" },
-      { alt: "Blog listing", src: "" },
+      { alt: "Blog listing", src: "", width: "" },
+      { alt: "Blog listing", src: "", width: "" },
     ],
   },
   {
     title: "Blog Single",
     width: "w-full",
-    images: [{ alt: "Blog single", src: "" }],
+    images: [{ alt: "Blog single", src: "", width: "" }],
   },
   {
     title: "Contact",
     width: "w-full",
-    images: [{ alt: "Contact", src: "" }],
+    images: [{ alt: "Contact", src: "", width: "" }],
   },
   {
     title: "Faqs",
     width: "w-full",
-    images: [{ alt: "Fa qs", src: "" }],
+    images: [{ alt: "Fa qs", src: "", width: "" }],
   },
   {
     title: "Error",
     width: "w-full",
-    images: [{ alt: "Fa qs", src: "" }],
+    images: [{ alt: "Fa qs", src: "", width: "" }],
   },
   {
     title: "Login / Register",
     width: "w-full",
-    images: [{ alt: "Fa qs", src: "" }],
+    images: [{ alt: "Fa qs", src: "", width: "" }],
   },
 ];
 
