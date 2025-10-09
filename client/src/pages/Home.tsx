@@ -80,7 +80,7 @@ export default function Home() {
             <div className="grid md:grid-cols-2 gap-4">
               {courseOverview.learningOutcomes.map((outcome, index) => (
                 <div key={index} className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-indigo-100 text-indigo-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <div className="w-6 h-6 rounded-full bg-[#a3caff] text-[#154072] flex items-center justify-center flex-shrink-0 mt-0.5">
                     ✓
                   </div>
                   <p className="text-gray-700">{outcome}</p>
@@ -127,7 +127,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-4">
             {courseOverview.keyTopics.map((topic, index) => (
               <div key={index} className="flex items-center gap-3 p-4 bg-white rounded-lg border">
-                <div className="w-8 h-8 rounded-full bg-purple-100 text-purple-600 flex items-center justify-center flex-shrink-0">
+                <div className="w-8 h-8 rounded-full bg-[#a3caff] text-[#154072] flex items-center justify-center flex-shrink-0 font-semibold">
                   {index + 1}
                 </div>
                 <span className="font-medium text-gray-800">{topic}</span>
