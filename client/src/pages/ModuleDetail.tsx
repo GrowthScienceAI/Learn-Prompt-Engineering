@@ -14,7 +14,7 @@ export default function ModuleDetail() {
   
   if (!module) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-blue-100 to-gray-50 flex items-center justify-center">
+      <div className="min-h-screen bg-gradient-to-br from-[#a3caff] via-white to-gray-50 flex items-center justify-center">
         <Header />
         <Card className="max-w-md">
           <CardHeader>
@@ -34,7 +34,7 @@ export default function ModuleDetail() {
   const moduleIndex = courseModules.findIndex(m => m.id === module.id);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-blue-100 to-gray-50">
+    <div className="min-h-screen bg-gradient-to-br from-[#a3caff] via-white to-gray-50">
       <Header />
       <div className="container mx-auto px-4 py-12">
         {/* Header */}
@@ -47,7 +47,7 @@ export default function ModuleDetail() {
           </Link>
           
           <div className="flex items-start gap-6">
-            <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-blue-500 to-blue-700 text-white flex items-center justify-center text-3xl font-bold flex-shrink-0">
+            <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-[#5590f3] to-[#154072] text-white flex items-center justify-center text-3xl font-bold flex-shrink-0">
               {moduleIndex + 1}
             </div>
             <div className="flex-1">
@@ -64,10 +64,10 @@ export default function ModuleDetail() {
         </div>
 
         {/* Progress Section */}
-        <Card className="mb-8 border-2 border-blue-200">
+        <Card className="mb-8 border-2 border-[#a3caff]">
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
-              <CheckCircle2 className="w-5 h-5 text-blue-600" />
+              <CheckCircle2 className="w-5 h-5 text-[#5590f3]" />
               Your Progress
             </CardTitle>
             <CardDescription>Track your learning journey</CardDescription>
@@ -76,7 +76,7 @@ export default function ModuleDetail() {
             <div className="space-y-2">
               <div className="flex justify-between text-sm">
                 <span className="text-gray-600">0 of {module.lessons.length} lessons completed</span>
-                <span className="font-medium text-blue-600">0%</span>
+                <span className="font-medium text-[#5590f3]">0%</span>
               </div>
               <Progress value={0} className="h-2" />
             </div>
@@ -89,10 +89,10 @@ export default function ModuleDetail() {
           <div className="space-y-4">
             {module.lessons.map((lesson, index) => (
               <Link key={lesson.id} href={`/modules/${module.id}/lessons/${lesson.id}`}>
-                <Card className="hover:shadow-lg transition-all cursor-pointer border-2 hover:border-blue-300 group">
+                <Card className="hover:shadow-lg transition-all cursor-pointer border-2 hover:border-[#5590f3] group">
                   <CardContent className="p-6">
                     <div className="flex items-center gap-4">
-                      <div className="w-12 h-12 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center text-lg font-bold flex-shrink-0 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                      <div className="w-12 h-12 rounded-xl bg-[#a3caff] text-[#154072] flex items-center justify-center text-lg font-bold flex-shrink-0 group-hover:bg-[#5590f3] group-hover:text-white transition-colors">
                         {index + 1}
                       </div>
                       <div className="flex-1">
@@ -107,7 +107,7 @@ export default function ModuleDetail() {
                           )}
                         </div>
                       </div>
-                      <ChevronRight className="w-5 h-5 text-gray-400 group-hover:text-blue-600 transition-colors" />
+                      <ChevronRight className="w-5 h-5 text-gray-400 group-hover:text-[#5590f3] transition-colors" />
                     </div>
                   </CardContent>
                 </Card>
@@ -117,7 +117,7 @@ export default function ModuleDetail() {
         </div>
 
         {/* Start Learning CTA */}
-        <Card className="mt-8 bg-gradient-to-r from-blue-600 to-blue-800 text-white border-0">
+        <Card className="mt-8 bg-gradient-to-r from-[#5590f3] to-[#154072] text-white border-0">
           <CardContent className="p-8 text-center">
             <h3 className="text-2xl font-bold mb-4">Ready to Start?</h3>
             <p className="text-lg mb-6 opacity-90">

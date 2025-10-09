@@ -16,7 +16,7 @@ export default function LessonViewer() {
   
   if (!module || !lesson) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-blue-100 to-gray-50 flex items-center justify-center">
+      <div className="min-h-screen bg-gradient-to-br from-[#a3caff] via-white to-gray-50 flex items-center justify-center">
         <Header />
         <Card className="max-w-md">
           <CardHeader>
@@ -38,7 +38,7 @@ export default function LessonViewer() {
   const nextLesson = currentLessonIndex < module.lessons.length - 1 ? module.lessons[currentLessonIndex + 1] : null;
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-blue-100 to-gray-50">
+    <div className="min-h-screen bg-gradient-to-br from-[#a3caff] via-white to-gray-50">
       <Header />
       <div className="container mx-auto px-4 py-8">
         {/* Navigation Bar */}
@@ -58,7 +58,7 @@ export default function LessonViewer() {
               <CardHeader>
                 <div className="flex items-start justify-between">
                   <div className="flex-1">
-                    <Badge className="mb-3 bg-blue-100 text-blue-700">
+                    <Badge className="mb-3 bg-[#a3caff] text-[#154072]">
                       Lesson {currentLessonIndex + 1} of {module.lessons.length}
                     </Badge>
                     <h1 className="text-3xl font-bold text-gray-900 mb-2">
@@ -126,14 +126,14 @@ export default function LessonViewer() {
               
               {nextLesson ? (
                 <Link href={`/modules/${module.id}/lessons/${nextLesson.id}`}>
-                  <Button className="bg-blue-600 hover:bg-blue-700">
+                  <Button className="bg-[#5590f3] hover:bg-[#154072]">
                     Next Lesson
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </Button>
                 </Link>
               ) : (
                 <Link href="/modules">
-                  <Button className="bg-blue-600 hover:bg-blue-700">
+                  <Button className="bg-[#5590f3] hover:bg-[#154072]">
                     Complete Module
                     <CheckCircle2 className="w-4 h-4 ml-2" />
                   </Button>
@@ -152,13 +152,13 @@ export default function LessonViewer() {
                 <div className="divide-y">
                   {module.lessons.map((l, index) => (
                     <Link key={l.id} href={`/modules/${module.id}/lessons/${l.id}`}>
-                      <div className={`p-4 hover:bg-blue-50 transition-colors cursor-pointer ${l.id === lesson.id ? 'bg-blue-100' : ''}`}>
+                      <div className={`p-4 hover:bg-[#a3caff] transition-colors cursor-pointer ${l.id === lesson.id ? 'bg-[#a3caff]' : ''}`}>
                         <div className="flex items-start gap-3">
-                          <div className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-medium flex-shrink-0 ${l.id === lesson.id ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-600'}`}>
+                          <div className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-medium flex-shrink-0 ${l.id === lesson.id ? 'bg-[#5590f3] text-white' : 'bg-gray-200 text-gray-600'}`}>
                             {index + 1}
                           </div>
                           <div className="flex-1 min-w-0">
-                            <p className={`text-sm font-medium ${l.id === lesson.id ? 'text-blue-900' : 'text-gray-700'}`}>
+                            <p className={`text-sm font-medium ${l.id === lesson.id ? 'text-[#154072]' : 'text-gray-700'}`}>
                               {l.title}
                             </p>
                           </div>

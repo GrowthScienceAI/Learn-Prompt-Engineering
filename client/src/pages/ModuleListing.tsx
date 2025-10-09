@@ -8,7 +8,7 @@ import Header from "@/components/Header";
 
 export default function ModuleListing() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-blue-100 to-gray-50">
+    <div className="min-h-screen bg-gradient-to-br from-[#a3caff] via-white to-gray-50">
       <Header />
       <div className="container mx-auto px-4 py-12">
         {/* Header */}
@@ -28,11 +28,11 @@ export default function ModuleListing() {
         {/* Modules List */}
         <div className="space-y-6">
           {courseModules.map((module, index) => (
-            <Card key={module.id} className="hover:shadow-lg transition-shadow border-2 hover:border-blue-300">
+            <Card key={module.id} className="hover:shadow-lg transition-shadow border-2 hover:border-[#5590f3]">
               <CardHeader>
                 <div className="flex items-start justify-between">
                   <div className="flex items-start gap-4 flex-1">
-                    <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-blue-500 to-blue-700 text-white flex items-center justify-center text-2xl font-bold flex-shrink-0">
+                    <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-[#5590f3] to-[#154072] text-white flex items-center justify-center text-2xl font-bold flex-shrink-0">
                       {index + 1}
                     </div>
                     <div className="flex-1">
@@ -49,7 +49,7 @@ export default function ModuleListing() {
                     </div>
                   </div>
                   <Link href={`/modules/${module.id}`}>
-                    <Button className="bg-blue-600 hover:bg-blue-700">
+                    <Button className="bg-[#5590f3] hover:bg-[#154072]">
                       Start Module
                       <ChevronRight className="ml-2 w-4 h-4" />
                     </Button>
@@ -64,8 +64,8 @@ export default function ModuleListing() {
                       key={lesson.id} 
                       href={`/modules/${module.id}/lessons/${lesson.id}`}
                     >
-                      <div className="flex items-center gap-2 p-3 rounded-lg bg-gray-50 hover:bg-blue-50 transition-colors cursor-pointer group">
-                        <div className="w-8 h-8 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center text-sm font-medium flex-shrink-0 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                      <div className="flex items-center gap-2 p-3 rounded-lg bg-gray-50 hover:bg-[#a3caff] transition-colors cursor-pointer group">
+                        <div className="w-8 h-8 rounded-full bg-[#a3caff] text-[#154072] flex items-center justify-center text-sm font-medium flex-shrink-0 group-hover:bg-[#5590f3] group-hover:text-white transition-colors">
                           {lessonIndex + 1}
                         </div>
                         <div className="flex-1 min-w-0">
