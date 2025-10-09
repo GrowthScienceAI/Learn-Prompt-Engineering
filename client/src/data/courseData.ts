@@ -27,43 +27,61 @@ export const promptEngineeringTechniques: Technique[] = [
     id: "zero-shot",
     name: "Zero-shot Prompting",
     description: "Ask the model to perform a task with no prior examples.",
-    example: "Explain the concept of climate change, its causes, and its effects in simple terms."
+    example: "You are a senior cybersecurity analyst. Analyze this network log and identify any potential security threats. For each threat, specify: severity level (Critical/High/Medium/Low), attack vector, and recommended mitigation strategy. Present findings in a structured incident report format."
   },
   {
     id: "few-shot",
     name: "Few-shot Prompting",
     description: "Provide a few examples to guide the model's output.",
-    example: "Here are some examples of how to explain complex topics... Now explain: Climate Change."
+    example: "Extract key entities from customer feedback:\n\nInput: \"The new iPhone camera is amazing but battery life is disappointing.\"\nOutput: {product: \"iPhone\", positive: [\"camera\"], negative: [\"battery life\"]}\n\nInput: \"Tesla Model 3 has incredible acceleration, though the interior feels cheap.\"\nOutput: {product: \"Tesla Model 3\", positive: [\"acceleration\"], negative: [\"interior quality\"]}\n\nNow extract from: \"The MacBook Pro M3 runs cool and quiet, but the price is hard to justify.\""
   },
   {
     id: "chain-of-thought",
     name: "Chain of Thought (CoT)",
     description: "Encourage step-by-step reasoning.",
-    example: "Step 1: Define climate change. Step 2: Explain causes. Step 3: Describe effects."
+    example: "A company's revenue grew from $2.5M to $4.8M over 3 years, while operating costs increased from $1.8M to $3.1M. Should they expand to a new market requiring $800K investment? Think step by step:\n\n1. Calculate revenue growth rate\n2. Calculate cost growth rate and profit margins\n3. Assess sustainability of current trajectory\n4. Evaluate risk vs. opportunity of expansion\n5. Provide recommendation with justification"
   },
   {
     id: "meta-prompting",
     name: "Meta Prompting",
     description: "Ask the model to generate or refine its own prompts before answering.",
-    example: "Create a prompt that will help you explain climate change in simple terms."
+    example: "Before answering the user's question about implementing microservices architecture, first:\n\n1. Generate 3 clarifying questions to understand their context (team size, current architecture, scale requirements)\n2. Create a structured prompt template that will guide a comprehensive analysis\n3. Rate your prompt template on clarity (1-10) and refine if below 8\n4. Then use your refined prompt to provide the answer"
   },
   {
     id: "self-consistency",
     name: "Self-consistency",
     description: "Request multiple independent answers and select the most coherent.",
-    example: "Provide three different explanations of climate change. Then identify the most coherent explanation."
+    example: "Generate three independent solutions to this algorithm problem using different approaches (dynamic programming, greedy algorithm, divide-and-conquer). For each solution:\n- Provide the pseudocode\n- Analyze time/space complexity\n- List edge cases\n\nThen compare all three, identify the most efficient approach, and explain why it's optimal."
   },
   {
     id: "rag",
     name: "Retrieval Augmented Generation (RAG)",
     description: "Combine external information retrieval with generative AI.",
-    example: "Using the global temperature datasets from NASA GISS, explain climate change in simple terms."
+    example: "Based on the latest Q4 2024 earnings reports from Apple, Microsoft, and Google (retrieved from SEC filings), analyze the AI investment trends across these tech giants. For each company:\n- Identify AI-related revenue streams\n- Compare YoY AI infrastructure spending\n- Extract future AI strategy statements from CEO remarks\n\nCite specific page numbers and filing sections for all claims."
   },
   {
     id: "react",
     name: "ReAct (Reasoning and Acting)",
     description: "Combine reasoning and acting prompts.",
-    example: "Analyze the following climate data and identify key trends. Based on your analysis, explain climate change."
+    example: "Research the current state of quantum computing applications in cryptography:\n\nThought: I need to find recent developments in post-quantum cryptography\nAction: Search academic papers from 2024-2025 on 'post-quantum cryptography standards'\nObservation: [results show NIST standardization of new algorithms]\n\nThought: I should understand the timeline for implementation\nAction: Search for 'NIST post-quantum migration timeline enterprise'\nObservation: [results indicate 2025-2030 transition period]\n\nProvide a comprehensive analysis with actionable recommendations for enterprise security teams."
+  },
+  {
+    id: "tree-of-thoughts",
+    name: "Tree of Thoughts (ToT)",
+    description: "Explore multiple reasoning paths and evaluate the best solution.",
+    example: "Design a scalable notification system for 10M users. Explore three architectural approaches:\n\nPath 1: Push-based (WebSocket) → Evaluate: latency, server cost, complexity\nPath 2: Pull-based (Polling) → Evaluate: freshness, client battery, server load  \nPath 3: Hybrid (Push + Queue) → Evaluate: reliability, cost, implementation time\n\nFor each path, identify pros/cons and potential failure modes. Select the optimal approach based on: real-time requirements, budget constraints, and team expertise."
+  },
+  {
+    id: "structured-output",
+    name: "Structured Output",
+    description: "Define precise output format using JSON schemas or templates.",
+    example: "Analyze this product review and return a JSON object matching this schema:\n\n{\n  \"sentiment\": \"positive\" | \"negative\" | \"neutral\",\n  \"rating_prediction\": 1-5,\n  \"key_aspects\": [\n    {\"feature\": string, \"sentiment\": string, \"quote\": string}\n  ],\n  \"purchase_intent\": \"high\" | \"medium\" | \"low\",\n  \"competitor_mentions\": [string],\n  \"actionable_feedback\": string\n}\n\nReview: \"This laptop beats my old Dell in every way - the M3 chip is blazingly fast for video editing. Battery lasts all day unlike my colleague's HP. Only wish it had more ports, but USB-C hubs solve that. Definitely buying another for my team.\""
+  },
+  {
+    id: "self-refinement",
+    name: "Self-Refinement",
+    description: "Model critiques and improves its own outputs iteratively.",
+    example: "Write a Python function to detect SQL injection attempts.\n\nAfter writing, perform self-review:\n1. Rate your solution's security coverage (1-10)\n2. Identify any edge cases you missed\n3. Check for performance bottlenecks\n4. Suggest improvements to your own code\n5. Rewrite the function incorporating your critiques\n6. Explain what changed and why it's better\n\nRepeat the review process until you rate it 9/10 or higher."
   }
 ];
 
