@@ -4,8 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
-import { ArrowLeft, ArrowRight, Clock, CheckCircle2, Lightbulb } from "lucide-react";
+import { ArrowLeft, ArrowRight, CheckCircle2, Lightbulb } from "lucide-react";
 import ReactMarkdown from "react-markdown";
+import Header from "@/components/Header";
 
 export default function LessonViewer() {
   const [, params] = useRoute("/modules/:moduleId/lessons/:lessonId");
@@ -15,7 +16,8 @@ export default function LessonViewer() {
   
   if (!module || !lesson) {
     return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-blue-100 to-gray-50 flex items-center justify-center">
+        <Header />
         <Card className="max-w-md">
           <CardHeader>
             <CardTitle>Lesson Not Found</CardTitle>
@@ -36,7 +38,8 @@ export default function LessonViewer() {
   const nextLesson = currentLessonIndex < module.lessons.length - 1 ? module.lessons[currentLessonIndex + 1] : null;
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-blue-100 to-gray-50">
+      <Header />
       <div className="container mx-auto px-4 py-8">
         {/* Navigation Bar */}
         <div className="mb-6 flex items-center justify-between">
@@ -46,10 +49,6 @@ export default function LessonViewer() {
               Back to {module.title}
             </Button>
           </Link>
-          <Badge variant="secondary" className="flex items-center gap-1">
-            <Clock className="w-3 h-3" />
-            {lesson.duration}
-          </Badge>
         </div>
 
         <div className="grid lg:grid-cols-4 gap-8">
@@ -59,7 +58,7 @@ export default function LessonViewer() {
               <CardHeader>
                 <div className="flex items-start justify-between">
                   <div className="flex-1">
-                    <Badge className="mb-3 bg-indigo-100 text-indigo-700">
+                    <Badge className="mb-3 bg-blue-100 text-blue-700">
                       Lesson {currentLessonIndex + 1} of {module.lessons.length}
                     </Badge>
                     <h1 className="text-3xl font-bold text-gray-900 mb-2">
@@ -127,14 +126,14 @@ export default function LessonViewer() {
               
               {nextLesson ? (
                 <Link href={`/modules/${module.id}/lessons/${nextLesson.id}`}>
-                  <Button className="bg-indigo-600 hover:bg-indigo-700">
+                  <Button className="bg-blue-600 hover:bg-blue-700">
                     Next Lesson
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </Button>
                 </Link>
               ) : (
                 <Link href="/modules">
-                  <Button className="bg-green-600 hover:bg-green-700">
+                  <Button className="bg-blue-600 hover:bg-blue-700">
                     Complete Module
                     <CheckCircle2 className="w-4 h-4 ml-2" />
                   </Button>
@@ -153,16 +152,15 @@ export default function LessonViewer() {
                 <div className="divide-y">
                   {module.lessons.map((l, index) => (
                     <Link key={l.id} href={`/modules/${module.id}/lessons/${l.id}`}>
-                      <div className={`p-4 hover:bg-indigo-50 transition-colors cursor-pointer ${l.id === lesson.id ? 'bg-indigo-100' : ''}`}>
+                      <div className={`p-4 hover:bg-blue-50 transition-colors cursor-pointer ${l.id === lesson.id ? 'bg-blue-100' : ''}`}>
                         <div className="flex items-start gap-3">
-                          <div className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-medium flex-shrink-0 ${l.id === lesson.id ? 'bg-indigo-600 text-white' : 'bg-gray-200 text-gray-600'}`}>
+                          <div className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-medium flex-shrink-0 ${l.id === lesson.id ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-600'}`}>
                             {index + 1}
                           </div>
                           <div className="flex-1 min-w-0">
-                            <p className={`text-sm font-medium ${l.id === lesson.id ? 'text-indigo-900' : 'text-gray-700'}`}>
+                            <p className={`text-sm font-medium ${l.id === lesson.id ? 'text-blue-900' : 'text-gray-700'}`}>
                               {l.title}
                             </p>
-                            <p className="text-xs text-gray-500 mt-1">{l.duration}</p>
                           </div>
                         </div>
                       </div>

@@ -3,15 +3,17 @@ import { courseOverview, courseModules, promptEngineeringTechniques } from "@/da
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { BookOpen, Clock, Users, Target, Sparkles, ArrowRight } from "lucide-react";
+import { BookOpen, Users, Target, Sparkles, ArrowRight, GraduationCap } from "lucide-react";
+import Header from "@/components/Header";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-blue-100 to-gray-50">
+      <Header />
       <div className="container mx-auto px-4 py-12">
         {/* Hero Section */}
         <div className="text-center mb-16">
-          <Badge className="mb-4 bg-indigo-100 text-indigo-700 hover:bg-indigo-200">
+          <Badge className="mb-4 bg-blue-100 text-blue-700 hover:bg-blue-200">
             <Sparkles className="w-3 h-3 mr-1" />
             Interactive Learning Experience
           </Badge>
@@ -23,13 +25,13 @@ export default function Home() {
           </p>
           <div className="flex gap-4 justify-center">
             <Link href="/modules">
-              <Button size="lg" className="bg-indigo-600 hover:bg-indigo-700">
+              <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
                 Start Learning
                 <ArrowRight className="ml-2 w-4 h-4" />
               </Button>
             </Link>
             <Link href="/techniques">
-              <Button size="lg" variant="outline">
+              <Button size="lg" variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-50">
                 <BookOpen className="mr-2 w-4 h-4" />
                 Browse Techniques
               </Button>
@@ -39,17 +41,17 @@ export default function Home() {
 
         {/* Course Info Grid */}
         <div className="grid md:grid-cols-3 gap-6 mb-16">
-          <Card className="border-2 hover:border-indigo-200 transition-colors">
+          <Card className="border-2 hover:border-blue-200 transition-colors">
             <CardHeader>
-              <Clock className="w-8 h-8 text-indigo-600 mb-2" />
-              <CardTitle>Duration</CardTitle>
-              <CardDescription>{courseOverview.duration}</CardDescription>
+              <GraduationCap className="w-8 h-8 text-blue-600 mb-2" />
+              <CardTitle>Modules</CardTitle>
+              <CardDescription>{courseModules.length} comprehensive modules</CardDescription>
             </CardHeader>
           </Card>
           
-          <Card className="border-2 hover:border-indigo-200 transition-colors">
+          <Card className="border-2 hover:border-blue-200 transition-colors">
             <CardHeader>
-              <Users className="w-8 h-8 text-indigo-600 mb-2" />
+              <Users className="w-8 h-8 text-blue-600 mb-2" />
               <CardTitle>Who It's For</CardTitle>
               <CardDescription>
                 {courseOverview.targetAudience.slice(0, 3).join(", ")}
@@ -57,9 +59,9 @@ export default function Home() {
             </CardHeader>
           </Card>
           
-          <Card className="border-2 hover:border-indigo-200 transition-colors">
+          <Card className="border-2 hover:border-blue-200 transition-colors">
             <CardHeader>
-              <Target className="w-8 h-8 text-indigo-600 mb-2" />
+              <Target className="w-8 h-8 text-blue-600 mb-2" />
               <CardTitle>Prerequisites</CardTitle>
               <CardDescription>{courseOverview.prerequisites}</CardDescription>
             </CardHeader>
@@ -96,9 +98,9 @@ export default function Home() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {courseModules.map((module, index) => (
               <Link key={module.id} href={`/modules/${module.id}`}>
-                <Card className="h-full hover:shadow-lg transition-shadow cursor-pointer border-2 hover:border-indigo-300">
+                <Card className="h-full hover:shadow-lg transition-shadow cursor-pointer border-2 hover:border-blue-300">
                   <CardHeader>
-                    <div className="w-12 h-12 rounded-lg bg-indigo-100 text-indigo-600 flex items-center justify-center mb-3 text-xl font-bold">
+                    <div className="w-12 h-12 rounded-lg bg-blue-100 text-blue-700 flex items-center justify-center mb-3 text-xl font-bold">
                       {index + 1}
                     </div>
                     <CardTitle className="text-lg">{module.title}</CardTitle>
@@ -107,11 +109,7 @@ export default function Home() {
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <div className="flex items-center text-sm text-gray-500">
-                      <Clock className="w-4 h-4 mr-1" />
-                      {module.duration}
-                    </div>
-                    <div className="mt-2 text-sm text-gray-600">
+                    <div className="text-sm text-gray-600">
                       {module.lessons.length} lessons
                     </div>
                   </CardContent>
@@ -139,7 +137,7 @@ export default function Home() {
         </div>
 
         {/* CTA Section */}
-        <div className="text-center bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-2xl p-12">
+        <div className="text-center bg-gradient-to-r from-blue-600 to-blue-800 text-white rounded-2xl p-12">
           <h2 className="text-3xl font-bold mb-4">Ready to Master Prompt Engineering?</h2>
           <p className="text-xl mb-8 opacity-90">
             Join thousands of learners unlocking the power of AI through effective prompts
