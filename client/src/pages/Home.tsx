@@ -1,4 +1,5 @@
 import { Link } from "wouter";
+import { useEffect } from "react";
 import { courseOverview, courseModules, promptEngineeringTechniques } from "@/data/courseData";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -7,6 +8,11 @@ import { BookOpen, Users, Target, Sparkles, ArrowRight, GraduationCap } from "lu
 import Header from "@/components/Header";
 
 export default function Home() {
+  // Scroll to top when page loads
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  }, []);
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#a3caff] via-white to-gray-50">
       <Header />

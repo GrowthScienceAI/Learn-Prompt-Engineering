@@ -1,4 +1,5 @@
 import { useRoute, Link } from "wouter";
+import { useEffect } from "react";
 import { courseModules } from "@/data/courseData";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -11,6 +12,11 @@ export default function ModuleDetail() {
   const [, params] = useRoute("/modules/:moduleId");
   
   const module = courseModules.find(m => m.id === params?.moduleId);
+
+  // Scroll to top whenever the module changes
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  }, [params?.moduleId]);
   
   if (!module) {
     return (

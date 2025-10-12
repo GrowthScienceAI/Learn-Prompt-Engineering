@@ -381,27 +381,6 @@ export const courseModules: Module[] = [
     ]
   },
   {
-    id: "module-5",
-    title: "Specialized Applications",
-    description: "Apply prompt engineering to code generation, RAG, multimodal AI, and business use cases.",
-    duration: "6-8 hours",
-    lessons: [
-      {
-        id: "lesson-5-1",
-        title: "Retrieval-Augmented Generation (RAG)",
-        duration: "3 hours",
-        content: "# Retrieval-Augmented Generation\n\nCombine external knowledge retrieval with AI generation.\n\n## Why RAG?\n\n**Problems RAG Solves:**\n- Knowledge cutoff dates\n- Hallucination on facts\n- Domain-specific information needs\n- Real-time data requirements\n\n## How RAG Works\n\n1. User asks a question\n2. Retrieve relevant documents from knowledge base\n3. Provide documents as context to LLM\n4. LLM generates answer based on retrieved context\n\n## Best Practices\n\n- Chunk documents appropriately (500-1000 tokens)\n- Use semantic similarity for retrieval\n- Always cite sources\n- Handle missing information gracefully",
-        keyPoints: [
-          "RAG grounds AI responses in real documents",
-          "Solves hallucination and knowledge cutoff problems",
-          "Retrieval uses semantic similarity",
-          "Always cite sources in responses"
-        ],
-        handsOnExercise: "Create a simple RAG system with 5 documents. Build prompts that cite sources correctly."
-      }
-    ]
-  },
-  {
     id: "module-6",
     title: "Production Deployment",
     description: "Deploy prompt engineering systems with security, optimization, and monitoring.",

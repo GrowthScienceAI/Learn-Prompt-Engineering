@@ -1,4 +1,5 @@
 import { useRoute, Link } from "wouter";
+import { useEffect } from "react";
 import { courseModules } from "@/data/courseData";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -13,6 +14,11 @@ export default function LessonViewer() {
   
   const module = courseModules.find(m => m.id === params?.moduleId);
   const lesson = module?.lessons.find(l => l.id === params?.lessonId);
+
+  // Scroll to top whenever the lesson changes
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  }, [params?.lessonId, params?.moduleId]);
   
   if (!module || !lesson) {
     return (
