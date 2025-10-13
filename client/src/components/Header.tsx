@@ -12,7 +12,7 @@ export default function Header() {
           />
         </Link>
         <a
-          href="https://tomstools.directory"
+          href="https://tom-panos.com"
           target="_blank"
           rel="noopener noreferrer"
           className="text-[#154072] hover:text-[#5590f3] font-semibold text-lg transition-colors"
