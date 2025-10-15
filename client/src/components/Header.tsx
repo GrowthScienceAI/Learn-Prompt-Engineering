@@ -15,7 +15,7 @@ export default function Header() {
           href="https://tom-panos.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-[#154072] hover:text-[#5590f3] font-semibold text-[0.84rem] transition-colors"
+          className="text-[#154072] hover:text-[#5590f3] text-[0.966rem] transition-colors"
           data-testid="link-home"
         >
           Home
@@ -24,7 +24,7 @@ export default function Header() {
           href="https://tom-panos.com/toms-tools-library"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-[#154072] hover:text-[#5590f3] font-semibold text-[0.84rem] transition-colors"
+          className="text-[#154072] hover:text-[#5590f3] text-[0.966rem] transition-colors"
           data-testid="link-tools-library"
         >
           TomsTools Software Library
