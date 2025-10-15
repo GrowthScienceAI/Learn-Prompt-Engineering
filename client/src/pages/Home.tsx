@@ -29,15 +29,15 @@ export default function Home() {
           <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
             {courseOverview.description}
           </p>
-          <div className="flex gap-4 justify-center">
+          <div className="flex gap-2 sm:gap-4 justify-center px-2">
             <Link href="/modules">
-              <Button size="lg" className="bg-[#5590f3] hover:bg-[#154072]">
+              <Button size="lg" className="bg-[#5590f3] hover:bg-[#154072] text-sm sm:text-base px-4 sm:px-6">
                 Start Learning
                 <ArrowRight className="ml-2 w-4 h-4" />
               </Button>
             </Link>
             <Link href="/techniques">
-              <Button size="lg" variant="outline" className="border-[#5590f3] text-[#5590f3] hover:bg-[#a3caff] hover:text-[#154072]">
+              <Button size="lg" variant="outline" className="border-[#5590f3] text-[#5590f3] hover:bg-[#a3caff] hover:text-[#154072] text-sm sm:text-base px-4 sm:px-6">
                 <BookOpen className="mr-2 w-4 h-4" />
                 Browse Techniques
               </Button>
