@@ -16,9 +16,18 @@ export default function Header() {
           target="_blank"
           rel="noopener noreferrer"
           className="text-[#154072] hover:text-[#5590f3] font-semibold text-lg transition-colors"
-          data-testid="link-tomstools"
+          data-testid="link-home"
         >
-          TomsTools
+          Home
+        </a>
+        <a
+          href="https://tom-panos.com/toms-tools-library"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-[#154072] hover:text-[#5590f3] font-semibold text-lg transition-colors"
+          data-testid="link-tools-library"
+        >
+          TomsTools Software Library
         </a>
       </div>
     </header>
