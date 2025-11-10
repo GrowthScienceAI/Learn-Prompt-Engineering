@@ -27,7 +27,25 @@ export default function Header() {
           className="text-[#154072] hover:text-[#5590f3] text-[0.966rem] transition-colors"
           data-testid="link-tools-library"
         >
-          TomsTools Software Library
+          Software Library
+        </a>
+        <a
+          href="https://tom-panos.com/human-centered-ai"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-[#154072] hover:text-[#5590f3] text-[0.966rem] transition-colors"
+          data-testid="link-mission"
+        >
+          My Mission
+        </a>
+        <a
+          href="https://tom-panos.com/toms-blog"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-[#154072] hover:text-[#5590f3] text-[0.966rem] transition-colors"
+          data-testid="link-blog"
+        >
+          My Blog
         </a>
       </div>
     </header>
